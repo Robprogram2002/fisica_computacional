@@ -5,12 +5,12 @@
 int main()
 {
     srand(time(NULL));
-    int sums[6] = {0, 0, 0, 0, 0, 0};
     for (int i = 0; i <= 10000; i++)
     {
-        int random = (rand() % 6) + 1;
-        sums[random - 1] += 1;
-        printf("Lanzamiento %d : \t resultado : %d \n", i, random);
+        int x = (rand() % 6) + 1;
+        int y = (rand() % 6) + 1;
+        double r = sqrt(x * x + y * y);
+        printf("Lanzamiento %d : \t resultado : %d \n", i, x);
     }
 
     for (int i = 0; i < 6; i++)
