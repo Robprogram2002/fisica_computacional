@@ -8,7 +8,7 @@ int main()
 {
   double sup, error, tol, phi0, h;
   int i, j, n, iter = 0, k;
-  double p = 1.95; // parametro SOR
+  double p = 1.10; // parametro SOR
   tol = 1.0E-4;
   h = 0.005;
   n = 1.0 / h;
@@ -71,12 +71,12 @@ int main()
     }
   } while (sup > tol);
 
-  // printf("iter = %d \n",iter);
+  // printf("iter = %d \n", iter);
   for (i = 0; i <= n; i++)
   {
     for (j = 0; j <= n; j++)
     {
-      printf(" %lf %lf %lf \n", i * h, j * h, rho[i][j]);
+      printf(" %lf %lf %lf \n", i * h, j * h, phi[i][j]);
     }
     printf("\n");
   }
